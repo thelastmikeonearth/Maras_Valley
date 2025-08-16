@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmsr005w5il7p"]
+
+[ext_resource type="PackedScene" uid="uid://crld70mqhshc7" path="res://scenes/player.tscn" id="1_nnsk1"]
+[ext_resource type="TileSet" uid="uid://coibhpmtbx78" path="res://resources/terrain.tres" id="2_rwgxs"]
+
+[node name="world" type="Node2D"]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(3, 3)
+tile_set = ExtResource("2_rwgxs")
+
+[node name="Player1" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(172, 140)
+player_id = 2
+
+[node name="Player2" parent="." instance=ExtResource("1_nnsk1")]
+position = Vector2(218, 93)
+player_id = 1
