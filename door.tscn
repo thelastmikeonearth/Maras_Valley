@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cs7fo41505xaj"]
+
+[ext_resource type="Texture2D" uid="uid://q01xxrk3f174" path="res://assets/Tilesets/Doors.png" id="1_ba8gm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ba8gm"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v6xrn"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0phs7"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50cdl"]
+atlas = ExtResource("1_ba8gm")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y5njw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ba8gm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v6xrn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0phs7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50cdl")
+}],
+"loop": true,
+"name": &"open_close",
+"speed": 5.0
+}]
+
+[node name="Door" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_y5njw")
+animation = &"open_close"
+frame = 1
+frame_progress = 0.578485
